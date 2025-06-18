@@ -109,7 +109,7 @@
                         android:id="@+id/tvProductPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="100.000"
+                        android:text="200.000"
                         android:textSize="22sp"
                         android:textColor="#03A9F4"
                         android:textStyle="bold"
