@@ -1,8 +1,10 @@
 package com.project.edwinuas_nasmoco.api;
 
 
+
 import com.project.edwinuas_nasmoco.api.model.Mobil;
 import com.project.edwinuas_nasmoco.api.model.MobilResponse;
+ f2cb6faf489d2697f7df7569dcdb12cea4ac2e14
 import com.project.edwinuas_nasmoco.api.ui.product.Product;
 
 import java.util.List;
@@ -64,9 +66,14 @@ public interface RegisterAPI {
             @Part MultipartBody.Part imageupload
     );
 
+
+    @GET("get_mobil_by_kategori.php")
+
     @FormUrlEncoded
     @POST("produk_by_kategori.php")
+
     Call<MobilResponse> getMobilByKategori(@Query("kategori") String kategori);
 }
 
 
+ f2cb6faf489d2697f7df7569dcdb12cea4ac2e14

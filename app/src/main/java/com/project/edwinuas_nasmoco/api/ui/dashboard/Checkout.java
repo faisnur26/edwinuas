@@ -8,7 +8,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+<<<<<<< HEAD
+=======
 import android.widget.EditText;
+>>>>>>> f2cb6faf489d2697f7df7569dcdb12cea4ac2e14
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -56,14 +59,22 @@ public class Checkout extends AppCompatActivity {
     private TextView tvShippingCost, tvTotalAll, tvSubtotal, tvEstimatedDelivery;
     private Button btnCheckout, btnCheckTax;
     private RadioGroup rgPaymentMethod;
+<<<<<<< HEAD
+    private TextView etFullName, etAddress, etPhoneNumber, etKodepos;
+=======
     private EditText etFullName, etAddress, etPhoneNumber, etKodepos;
+>>>>>>> f2cb6faf489d2697f7df7569dcdb12cea4ac2e14
 
     private List<OrderItem> orderItems;
     
     private List<Province> provinceList = new ArrayList<>();
     private List<City> cityList = new ArrayList<>();
+<<<<<<< HEAD
+    private List<String> courierList = Arrays.asList("jne", "tiki", "pos");
+=======
     private List<String> courierList = Arrays.asList("jne", "tiki");
     private List<String> courierDisplayNames = Arrays.asList("Cargo", "ABL Express");
+>>>>>>> f2cb6faf489d2697f7df7569dcdb12cea4ac2e14
 
     private int selectedProvinceId = -1;
     private int selectedCityId = -1;
@@ -156,13 +167,30 @@ public class Checkout extends AppCompatActivity {
 
         // Setup courier spinner
         ArrayAdapter<String> courierAdapter = new ArrayAdapter<>(this,
+<<<<<<< HEAD
+                android.R.layout.simple_spinner_item, courierList);
+=======
                 android.R.layout.simple_spinner_item, courierDisplayNames);
+>>>>>>> f2cb6faf489d2697f7df7569dcdb12cea4ac2e14
         courierAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCourier.setAdapter(courierAdapter);
 
         spinnerCourier.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+<<<<<<< HEAD
+                selectedCourier = courierList.get(position);
+                shippingCost = 0;
+                taxAmount = 0;
+                estimatedDelivery = "-";
+                updatePaymentDetails();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
+=======
                 // Gunakan value asli berdasarkan posisi yang dipilih
                 selectedCourier = courierList.get(position);
                 Log.d("SelectedCourier", "Courier selected: " + selectedCourier);
@@ -176,6 +204,7 @@ public class Checkout extends AppCompatActivity {
         });
 
 
+>>>>>>> f2cb6faf489d2697f7df7569dcdb12cea4ac2e14
         // Load provinces
         loadProvinces();
 
