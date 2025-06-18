@@ -64,7 +64,8 @@ public interface RegisterAPI {
             @Part MultipartBody.Part imageupload
     );
 
-    @GET("get_mobil_by_kategori.php")
+    @FormUrlEncoded
+    @POST("produk_by_kategori.php")
     Call<MobilResponse> getMobilByKategori(@Query("kategori") String kategori);
 }
 
