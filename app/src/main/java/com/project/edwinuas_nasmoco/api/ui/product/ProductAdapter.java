@@ -104,12 +104,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         notifyDataSetChanged();
     }
 
-    // Tambahkan method ini untuk update data
-    public void updateData(List<Product> newList) {
-        this.productList = newList;
-        notifyDataSetChanged();
-    }
-
     @Override
     public int getItemCount() {
         return productList != null ? productList.size() : 0;
